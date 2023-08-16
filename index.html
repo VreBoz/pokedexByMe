@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="shortcut icon" href="img/ball.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/ball.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,36 +19,31 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body onload="loadPokemon()">
+    <div id="loadingScreen" class="loading-screen">
+      <img class="pokemon-logo" src="./img/logoPoke.png" alt="" />
+      <div class="spinner"></div>
+      <h2>Loading...</h2>
+    </div>
 
     <div id="header">
       <div id="logo">Pokedex by-VreeBoz</div>
       <div>
-        <img class="pokeball" src="./img/bal-final.png" alt="">
-        <img class="pokemon-logo" src="./img/logoPoke.png" alt="">
-        <img class="pokeball" src="./img/bal-final.png" alt="">
+        <img class="pokeball" src="./img/bal-final.png" alt="" />
+        <img class="pokemon-logo" src="./img/logoPoke.png" alt="" />
+        <img class="pokeball" src="./img/bal-final.png" alt="" />
       </div>
       <div id="search-bar">
-        <input id="search-input" type="text" placeholder="Search">
-        <button id="search-button">Search</button>
+        <input id="pokemonSearch" type="text" placeholder="Search" />
       </div>
     </div>
 
-    <div id="pkmn-bg" class="show-bg d-none " >
-      
-      
+    <div id="pkmn-bg" class="show-bg d-none">
       <div class="big-card-container">
-          <div id="big-card" class="big-card">
-            	
-          </div>
-          <div id="info-card" class="info-card">
-
-          </div>
+        <div id="big-card" class="big-card"></div>
+        <div id="info-card" class="info-card"></div>
       </div>
-      
     </div>
     <div id="pokedex">
       <div id="container" class="container">
@@ -56,14 +51,12 @@
       </div>
     </div>
     <div class="btn-container">
-      <button  id="load-more-btn">Load more</button>
+      <button onclick="loadMorePokemon()" id="load-more-btn">Load more</button>
     </div>
 
-    <div id="footer">
-      © 2023 Pokedex. All rights reserved.
-    </div>
-    
+    <div id="footer">© 2023 Pokedex. All rights reserved.</div>
 
-    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>
